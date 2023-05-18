@@ -17,9 +17,9 @@ exports.create_a_task = function(req, res) {
     var new_task = new Task(req.body);
 
     //handles null error
-    if(!new_task.task || !new_task.status){
+    if(!new_task.task || !new_task.date){
 
-        res.status(400).send({ error:true, message: 'Please provide task/status' });
+        res.status(400).send({ error:true, message: 'Please provide task/date' });
 
     }
     else{
